@@ -49,6 +49,7 @@ import { usePricingModalStore } from '@/stores/pricing-modal-store';
 import { useAccountState } from '@/hooks/billing';
 import { DynamicGreeting } from '@/components/ui/dynamic-greeting';
 import { useOptimisticFilesStore } from '@/stores/optimistic-files-store';
+import { EndOfYearBanner } from '@/components/home/end-of-year-banner';
 
 const GoogleSignIn = lazy(() => import('@/components/GoogleSignIn'));
 const AgentRunLimitBanner = lazy(() => 
@@ -420,6 +421,9 @@ export function HeroSection() {
                     </div>
 
                     <div className="flex flex-col items-center w-full max-w-3xl mx-auto gap-2 flex-wrap justify-center px-4 sm:px-0 animate-in fade-in-0 slide-in-from-bottom-4 duration-500 delay-100 fill-mode-both">
+                        {/* End of Year Banner - above chat input */}
+                        <EndOfYearBanner />
+                        
                         <div className="w-full relative">
                             <div className="relative z-10">
                                 <ChatInput
